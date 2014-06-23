@@ -1,0 +1,22 @@
+{
+  "name": "Awesome Note App",
+  "description": "Best thing since sliced bread",
+  "launch_path": "/note.html",
+  "icons": {
+    "128": "/icons/icon-128.png"
+  },
+  "developer": {
+    "name": "Awesome Apps(tm)",
+    "url": "http://telenor.com"
+  },
+  "type": "privileged",
+  "permissions": {
+    "geolocation" {
+      "description": "Access to your current location"
+    },
+    "contacts": {
+      "access": "readonly",
+      "description": "Assign a note to one of your contacts"
+    }
+  }
+}
