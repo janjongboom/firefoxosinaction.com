@@ -1,0 +1,10 @@
+{
+  "name": "Device Motion Game",
+  "developer": {
+    "name": "Jan Jongboom",
+    "url": "http://janjongboom.com"
+  },
+  "description": "Basics for a game that uses the accelerometer",
+  "launch_path": "/index.html",
+  "orientation": "portrait-primary"
+}
