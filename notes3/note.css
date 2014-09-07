@@ -1,0 +1,75 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font: 62.5% sans-serif;
+  background: white;
+  overflow-x: hidden;
+}
+body {
+  font-size: 1.6rem;
+}
+body > section {
+	position: absolute;
+	transition: transform 0.4s ease-in;
+  width: 100%;
+  height: 100%;
+}
+
+#list {
+	transform: translateX(0);
+}
+#detail {
+	transform: translateX(100%);
+}
+body.detail #list {
+	transform: translateX(-100%);
+}
+body.detail #detail {
+	transform: translateX(0);
+}
+
+#list > header, #detail > header {
+  background-color: #0095dd;
+  height: 5rem;
+}
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+.container {
+  padding: 0 1.5rem;
+}
+#list .container {
+  height: calc(100% - 5rem);
+  overflow-y: scroll;
+}
+#save {
+  margin-top: -.5rem;
+}
+
+#list [data-type="list"] {
+  padding: 0;
+}
+
+#notes.no-items:before {
+  content: "No notes yet";
+  margin-top: 1rem;
+  display: block;
+  font-style: italic;
+}
+
+#retrieving-location {
+  visibility: hidden;
+}
+#retrieving-location.visible {
+  visibility: visible;
+}
+#detail-contact {
+  padding: 1.5rem;
+  font-style: italic;
+  color: gray;
+}
+#detail-note {
+  padding: 1.5rem 0;
+  line-height: 1.8rem;
+}
