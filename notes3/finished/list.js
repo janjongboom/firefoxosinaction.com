@@ -38,15 +38,10 @@
 
       if (n.location) {
         var coords = n.location.latitude + ',' + n.location.longitude;
-
-        var aside = document.createElement('aside');
-        aside.classList.add('pack-end');
-        var img = document.createElement('img');
-        img.src = 'https://maps.google.com/maps/api/staticmap?size=' +
-          '100x100&sensor=false&zoom=13&center=' +
-          coords;
-        aside.appendChild(img);
-        newItem.appendChild(aside);
+        var aside = '<aside class="pack-end"><img src=https://maps.google.com/' +
+          'maps/api/staticmap?size=100x100&sensor=false&zoom=13&center=' +
+          coords + '></aside>';
+        newItem.innerHTML += aside;
       }
 
       var a = document.createElement('a');
@@ -59,9 +54,7 @@
       contactEl.textContent = n.contact;
       a.appendChild(noteEl);
       a.appendChild(contactEl);
-
       newItem.appendChild(a);
-
       notes.appendChild(newItem);
 
       n.element = newItem;
